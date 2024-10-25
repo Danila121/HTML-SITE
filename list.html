@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<head>
+  <title>Список всех Германских автомобилей</title>
+</head>
+<body>
+  <p>
+    <a href="main.html">Германские автомобили</a> 
+  </p>
+  <p> 
+    <a href="list.html">Список всех Германских автомобилей</a>
+  </p>
+  <hr color="black">
+
+
+  <details>
+    <table border="0">
+      <summary> График</summary>
+      <tr align="center">
+        <td><b>Значение по оси ОХ</b></td>
+        <td><b>Результат</b></td>
+      </tr>
+      <tr>
+        <td>
+          <form>
+            <input type="radio" name="Xvalue" value="country">Производитель<br>
+            <input type="radio" name="Xvalue" value="cost">Цена<br>
+            <input type="radio" name="Xvalue" value="year">Год<br>
+          </form>
+        </td>
+        <td>
+          <form>
+            <input type="checkbox" name="result" value="power">Средняя мощность двигателя(л.с)<br>
+            <input type="checkbox" name="result" value="maxspeed">Максимальная скорость<br>
+            <input type="checkbox" name="result" value="100km/h">Минимальный разгон до 100 км/ч<br>
+          </form>
+        </td>
+      <tr>
+    </table>
+  </details>
+
+  <details>
+    <summary> Фильтр</summary>
+    <p>
+      Название:<input type="text">
+    </p>
+    <p>
+      Производитель:<input type="text">
+    </p>
+    <p>
+      Цена(евро): от&nbsp;<input type="number">&nbsp;до&nbsp;<input type="number">
+    </p>
+    <p>
+      Год производства: от&nbsp;<input type="number">&nbsp;до&nbsp;<input type="number">
+    </p>
+    <p>
+      Мощность двигателя(л.с.): от&nbsp;<input type="number">&nbsp;до&nbsp;<input type="number">
+    </p>
+    <p>
+      Максимальная скорость(км/ч): от&nbsp;<input type="number">&nbsp;до&nbsp;<input type="number">
+    </p>
+    <p>
+      Разгон до 100км/ч(сек): от&nbsp;<input type="number">&nbsp;до&nbsp;<input type="number">
+    </p>
+    <input type="button" value="Найти">
+  </details>
+
+  <details>
+    <summary> Сортировка</summary>
+    <p>
+    Первый уровень:
+      <select name="first">
+        <option value="no">Нет</option>
+        <option value="name">Название</option>
+        <option value="manufacturer">Производитель</option>
+        <option value="price">Цена</option>
+        <option value="year">Год производства</option>
+        <option value="horsepower">Мощность двигателя</option>
+        <option value="speed">Максимальная скорость</option>
+      </select>
+      &nbsp;По убыванию?<input type="checkbox" name="sort" value="1">
+    </p>
+    <p>
+    Второй уровень:
+      <select name="second">
+        <option value="no">Нет</option>
+        <option value="name">Название</option>
+        <option value="manufacturer">Производитель</option>
+        <option value="price">Цена</option>
+        <option value="year">Год производства</option>
+        <option value="horsepower">Мощность двигателя</option>
+        <option value="speed">Максимальная скорость</option>
+      </select>
+      &nbsp;По убыванию?<input type="checkbox" name="sort" value="2">
+    </p>
+    <p>
+    Третий уровень:
+      <select name="second">
+        <option value="no">Нет</option>
+        <option value="name">Название</option>
+        <option value="manufacturer">Производитель</option>
+        <option value="price">Цена</option>
+        <option value="year">Год производства</option>
+        <option value="horsepower">Мощность двигателя</option>
+        <option value="speed">Максимальная скорость</option>
+      </select>
+      &nbsp;По убыванию?<input type="checkbox" name="sort" value="3">
+    </p>
+    <input type="button" value="Сортировать">
+  </details>
+
+  <h2>Таблица автомобилей</h2>
+  <table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Название</th>
+        <th>Производитель</th>
+        <th>Цена (евро)</th>
+        <th>Год производства</th>
+        <th>Мощность двигателя (л.с.)</th>
+        <th>Максимальная скорость (км/ч)</th>
+        <th>Разгон до 100 км/ч (сек)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Volkswagen Golf</td>
+        <td>Volkswagen</td>
+        <td>30000</td>
+        <td>2021</td>
+        <td>150</td>
+        <td>216</td>
+        <td>8.2</td>
+      </tr>
+      <tr>
+        <td>Audi A4</td>
+        <td>Audi</td>
+        <td>40000</td>
+        <td>2020</td>
+        <td>190</td>
+        <td>240</td>
+        <td>7.1</td>
+      </tr>
+      <tr>
+        <td>BMW 3 Series</td>
+        <td>BMW</td>
+        <td>50000</td>
+        <td>2022</td>
+        <td>255</td>
+        <td>250</td>
+        <td>5.8</td>
+      </tr>
+      <tr>
+        <td>Mercedes-Benz C-Class</td>
+        <td>Mercedes-Benz</td>
+        <td>55000</td>
+        <td>2021</td>
+        <td>255</td>
+        <td>250</td>
+        <td>6.0</td>
+      </tr>
+      <tr>
+        <td>Porsche 911</td>
+        <td>Porsche</td>
+        <td>100000</td>
+        <td>2023</td>
+        <td>443</td>
+        <td>308</td>
+        <td>3.5</td>
+      </tr>
+      <tr>
+        <td>Volkswagen Passat</td>
+        <td>Volkswagen</td>
+        <td>35000</td>
+        <td>2019</td>
+        <td>174</td>
+        <td>230</td>
+        <td>7.8</td>
+      </tr>
+      <tr>
+        <td>Audi Q5</td>
+        <td>Audi</td>
+        <td>45000</td>
+        <td>2022</td>
+        <td>261</td>
+        <td>237</td>
+        <td>6.7</td>
+      </tr>
+      <tr>
+        <td>BMW X5</td>
+        <td>BMW</td>
+        <td>60000</td>
+        <td>2023</td>
+        <td>335</td>
+        <td>243</td>
+        <td>5.3</td>
+      </tr>
+      <tr>
+        <td>Mercedes-Benz GLE</td>
+        <td>Mercedes-Benz</td>
+        <td>65000</td>
+        <td>2022</td>
+        <td>362</td>
+        <td>245</td>
+        <td>5.5</td>
+      </tr>
+      <tr>
+        <td>Porsche Macan</td>
+        <td>Porsche</td>
+        <td>70000</td>
+        <td>2021</td>
+        <td>375</td>
+        <td>261</td>
+        <td>4.7</td>
+      </tr>
+      <tr>
+        <td>BMW i3</td>
+        <td>BMW</td>
+        <td>45000</td>
+        <td>2020</td>
+        <td>170</td>
+        <td>150</td>
+        <td>7.3</td>
+      </tr>
+      <tr>
+        <td>Mercedes-Benz E-Class</td>
+        <td>Mercedes-Benz</td>
+        <td>70000</td>
+        <td>2021</td>
+        <td>362</td>
+        <td>250</td>
+        <td>5.2</td>
+      </tr>
+      <tr>
+        <td>Volkswagen Tiguan</td>
+        <td>Volkswagen</td>
+        <td>40000</td>
+        <td>2022</td>
+        <td>184</td>
+        <td>209</td>
+        <td>7.5</td>
+      </tr>
+      <tr>
+        <td>Audi A6</td>
+        <td>Audi</td>
+        <td>55000</td>
+        <td>2020</td>
+        <td>248</td>
+        <td>250</td>
+        <td>6.1</td>
+      </tr>
+      <tr>
+        <td>BMW Z4</td>
+        <td>BMW</td>
+        <td>65000</td>
+        <td>2022</td>
+        <td>382</td>
+        <td>250</td>
+        <td>4.4</td>
+      </tr>
+      <tr>
+        <td>Mercedes-Benz S-Class</td>
+        <td>Mercedes-Benz</td>
+        <td>110000</td>
+        <td>2023</td>
+        <td>429</td>
+        <td>250</td>
+        <td>4.6</td>
+      </tr>
+      <tr>
+        <td>Porsche Cayenne</td>
+        <td>Porsche</td>
+        <td>85000</td>
+        <td>2022</td>
+        <td>335</td>
+        <td>253</td>
+        <td>5.6</td>
+      </tr>
+      <tr>
+        <td>Volkswagen Arteon</td>
+        <td>Volkswagen</td>
+        <td>50000</td>
+        <td>2021</td>
+        <td>268</td>
+        <td>240</td>
+        <td>5.4</td>
+      </tr>
+      <tr>
+        <td>Audi Q7</td>
+        <td>Audi</td>
+        <td>75000</td>
+        <td>2021</td>
+        <td>335</td>
+        <td>250</td>
+        <td>5.9</td>
+      </tr>
+      <tr>
+        <td>BMW X3</td>
+        <td>BMW</td>
+        <td>55000</td>
+        <td>2022</td>
+        <td>248</td>
+        <td>240</td>
+        <td>6.3</td>
+      </tr>
+      <tr>
+        <td>Mercedes-Benz G-Class</td>
+        <td>Mercedes-Benz</td>
+        <td>130000</td>
+        <td>2023</td>
+        <td>416</td>
+        <td>210</td>
+        <td>5.6</td>
+      </tr>
+      <tr>
+        <td>Volkswagen T-Roc</td>
+        <td>Volkswagen</td>
+        <td>35000</td>
+        <td>2020</td>
+        <td>150</td>
+        <td>205</td>
+        <td>8.4</td>
+      </tr>
+      <tr>
+        <td>Audi A8</td>
+        <td>Audi</td>
+        <td>100000</td>
+        <td>2022</td>
+        <td>335</td>
+        <td>250</td>
+        <td>4.9</td>
+      </tr>
+      <tr>
+        <td>BMW X6</td>
+        <td>BMW</td>
+        <td>80000</td>
+        <td>2023</td>
+        <td>335</td>
+        <td>250</td>
+        <td>5.2</td>
+      </tr>
+      <tr>
+        <td>Mercedes-Benz CLA</td>
+        <td>Mercedes-Benz</td>
+        <td>45000</td>
+        <td>2021</td>
+        <td>221</td>
+        <td>240</td>
+        <td>6.3</td>
+      </tr>
+      <tr>
+        <td>Porsche Taycan</td>
+        <td>Porsche</td>
+        <td>120000</td>
+        <td>2023</td>
+        <td>469</td>
+        <td>260</td>
+        <td>3.8</td>
+      </tr>
+      <tr>
+        <td>Volkswagen ID.4</td>
+        <td>Volkswagen</td>
+        <td>50000</td>
+        <td>2022</td>
+        <td>201</td>
+        <td>180</td>
+        <td>8.5</td>
+      </tr>
+      <tr>
+        <td>Audi RS7</td>
+        <td>Audi</td>
+        <td>120000</td>
+        <td>2023</td>
+        <td>591</td>
+        <td>305</td>
+        <td>3.5</td>
+      </tr>
+      <tr>
+        <td>BMW iX3</td>
+        <td>BMW</td>
+        <td>70000</td>
+        <td>2022</td>
+        <td>282</td>
+        <td>200</td>
+        <td>6.8</td>
+      </tr>
+      <tr>
+        <td>Mercedes-Benz EQS</td>
+        <td>Mercedes-Benz</td>
+        <td>110000</td>
+        <td>2023</td>
+        <td>516</td>
+        <td>210</td>
+        <td>4.1</td>
+      </tr>
+
+      <tr>
+        <td>BMW 7 Series</td>
+        <td>BMW</td>
+        <td>90000</td>
+        <td>2022</td>
+        <td>523</td>
+        <td>250</td>
+        <td>4.2</td>
+      </tr>
+      <tr>
+        <td>Mercedes-Benz GLA</td>
+        <td>Mercedes-Benz</td>
+        <td>40000</td>
+        <td>2021</td>
+        <td>221</td>
+        <td>210</td>
+        <td>6.8</td>
+      </tr>
+      <tr>
+        <td>Porsche Macan</td>
+        <td>Porsche</td>
+        <td>65000</td>
+        <td>2022</td>
+        <td>261</td>
+        <td>232</td>
+        <td>5.7</td>
+      </tr>
+      <tr>
+        <td>Volkswagen Passat</td>
+        <td>Volkswagen</td>
+        <td>30000</td>
+        <td>2020</td>
+        <td>174</td>
+        <td>220</td>
+        <td>8.3</td>
+      </tr>
+      <tr>
+        <td>Audi Q5</td>
+        <td>Audi</td>
+        <td>55000</td>
+        <td>2022</td>
+        <td>261</td>
+        <td>237</td>
+        <td>5.9</td>
+      </tr>
+      <tr>
+        <td>BMW X1</td>
+        <td>BMW</td>
+        <td>38000</td>
+        <td>2021</td>
+        <td>228</td>
+        <td>235</td>
+        <td>6.3</td>
+      </tr>
+      <tr>
+        <td>Mercedes-Benz C-Class</td>
+        <td>Mercedes-Benz</td>
+        <td>48000</td>
+        <td>2022</td>
+        <td>255</td>
+        <td>250</td>
+        <td>5.9</td>
+      </tr>
+      <tr>
+        <td>Volkswagen Golf R</td>
+        <td>Volkswagen</td>
+        <td>45000</td>
+        <td>2023</td>
+        <td>315</td>
+        <td>250</td>
+        <td>4.7</td>
+      </tr>
+      <tr>
+        <td>Audi TT</td>
+        <td>Audi</td>
+        <td>50000</td>
+        <td>2022</td>
+        <td>228</td>
+        <td>250</td>
+        <td>5.2</td>
+      </tr>
+      <tr>
+        <td>Porsche Panamera</td>
+        <td>Porsche</td>
+        <td>95000</td>
+        <td>2023</td>
+        <td>325</td>
+        <td>289</td>
+        <td>5.1</td>
+      </tr>
+      <tr>
+        <td>BMW Z4</td>
+        <td>BMW</td>
+        <td>65000</td>
+        <td>2022</td>
+        <td>382</td>
+        <td>250</td>
+        <td>4.4</td>
+      </tr>
+      <tr>
+        <td>Mercedes-Benz E-Class</td>
+        <td>Mercedes-Benz</td>
+        <td>55000</td>
+        <td>2021</td>
+        <td>255</td>
+        <td>250</td>
+        <td>5.1</td>
+      </tr>
+      <tr>
+        <td>Volkswagen Arteon</td>
+        <td>Volkswagen</td>
+        <td>48000</td>
+        <td>2023</td>
+        <td>268</td>
+        <td>250</td>
+        <td>5.6</td>
+      </tr>
+      <tr>
+        <td>Audi Q7</td>
+        <td>Audi</td>
+        <td>70000</td>
+        <td>2022</td>
+        <td>335</td>
+        <td>250</td>
+        <td>5.7</td>
+      </tr>
+      <tr>
+        <td>Porsche 911</td>
+        <td>Porsche</td>
+        <td>120000</td>
+        <td>2023</td>
+        <td>443</td>
+        <td>293</td>
+        <td>3.8</td>
+      </tr>
+      <tr>
+        <td>BMW M3</td>
+        <td>BMW</td>
+        <td>75000</td>
+        <td>2022</td>
+        <td>473</td>
+        <td>290</td>
+        <td>4.1</td>
+      </tr>
+      <tr>
+        <td>Mercedes-Benz S-Class</td>
+        <td>Mercedes-Benz</td>
+        <td>110000</td>
+        <td>2023</td>
+        <td>496</td>
+        <td>250</td>
+        <td>4.3</td>
+      </tr>
+      <tr>
+        <td>Volkswagen Tiguan</td>
+        <td>Volkswagen</td>
+        <td>40000</td>
+        <td>2021</td>
+        <td>184</td>
+        <td>208</td>
+        <td>7.2</td>
+      </tr>
+      <tr>
+        <td>Audi A4</td>
+        <td>Audi</td>
+        <td>45000</td>
+        <td>2022</td>
+        <td>261</td>
+        <td>240</td>
+        <td>5.2</td>
+      </tr>
+      <tr>
+        <td>Porsche Cayenne</td>
+        <td>Porsche</td>
+        <td>85000</td>
+        <td>2023</td>
+        <td>335</td>
+        <td>270</td>
+        <td>4.9</td>
+      </tr>
+
+   </tbody>
+
+  </table>
+</body>
+</html>
